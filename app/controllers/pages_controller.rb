@@ -29,4 +29,13 @@ class PagesController < ApplicationController
     @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
   end
 
+  def secrets
+    password = params[:magic_word]
+
+    if password != "6469"
+      flash[:alert] = "Sorry, but you failed to provide the right password, bye bye!"
+      redirect_to :root
+    end
+  end
+
 end
