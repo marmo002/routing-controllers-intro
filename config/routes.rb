@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/this_us' => 'pages#about'
   get '/contest'=> 'pages#contest'
   get '/kitten/:size' => 'pages#kitten'
+  get '/many_kittens/:size' => 'pages#kittens'
+
 end
