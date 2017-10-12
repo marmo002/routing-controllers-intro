@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/' => 'pages#welcome'
   get '/welcome' => 'pages#welcome'
   get '/this_us' => 'pages#about'
+  get '/contest'=> 'pages#contest'
 end
