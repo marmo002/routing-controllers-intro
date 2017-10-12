@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   get '/welcome' => 'pages#welcome'
   get '/this_us' => 'pages#about'
   get '/contest'=> 'pages#contest'
-  get '/kitten/:size' => 'pages#kitten'
-  get '/many_kittens/:size' => 'pages#kittens'
+  get '/kitten/:size' => 'pages#kitten', as: 'kitten'
+  get '/many_kittens/:size' => 'pages#kittens', as: 'kittens'
 
-  get '/secrets/:magic_word' => 'pages#secrets'
+  get '/secrets/:magic_word' => 'pages#secrets', as: 'secret'
 
 end

@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   def contest
     flash[:notice] = "Sorry, the contest has ended"
-    redirect_to '/welcome'
+    redirect_to :root
   end
 
   def kitten
@@ -34,7 +34,7 @@ class PagesController < ApplicationController
 
     if password != "6469"
       flash[:alert] = "Sorry, but you failed to provide the right password, bye bye!"
-      redirect_to :root
+      redirect_to kitten_path("500")
     end
   end
 
